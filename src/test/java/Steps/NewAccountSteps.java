@@ -1,14 +1,15 @@
 package Steps;
 
 import Pages.NewAccount;
-import Support.Utils;
+import Support.BasePage;
 import io.cucumber.java.en.Given;
 
-public class NewAccountSteps extends Utils {
+public class NewAccountSteps extends BasePage {
 
-    //public static NewAccount newAccount = new NewAccount(Utils);
+    public static NewAccount newAccount = new NewAccount(driver);
 
-    @Given("I access the Disney shop website")
-    public void iAccessTheDisneyShopWebsite() {
+    @Given("I access the IMDb website")
+    public void iAccessTheIMDbWebsite() {
+        newAccount.openPage();
     }
 }

@@ -1,10 +1,18 @@
 package Pages;
 
-import Support.Utils;
-import org.openqa.selenium.support.PageFactory;
+import Support.BasePage;
+import Support.DriverManager;
 
-public class NewAccount extends Utils{
+public class NewAccount extends BasePage {
 
-    private static final String DisneyURL = "";
+    public DriverManager driver;
+    private static final String imdbURL = "https://www.imdb.com/";
 
+    public NewAccount(DriverManager stepDriver) {
+        driver = stepDriver;
+    }
+
+    public void openPage() {
+        driver.openURL(imdbURL);
+    }
 }

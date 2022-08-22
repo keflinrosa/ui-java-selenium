@@ -1,15 +1,15 @@
 package Steps;
 
-import Support.Utils;
+import Support.BasePage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-public class Hook extends Utils {
+public class Hooks extends BasePage {
 
     @Before
     public void beforeScenario(Scenario scenario) {
-        System.out.println("---- Starting scenario " + scenario.getName() + "execution ----");
+        System.out.println("---- Starting scenario " + scenario.getName() + " execution ----");
     }
 
     @After
@@ -17,7 +17,10 @@ public class Hook extends Utils {
         if(scenario.isFailed()) {
             System.out.println(scenario.getName());
         }
+        else {
+            System.out.println("---- Scenario " + scenario.getName() + " executed successfully ----");
+        }
         System.out.println("Closing the browser");
-        //driver.quit();
+        driver.quit();
     }
 }

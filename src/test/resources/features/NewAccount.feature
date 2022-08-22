@@ -1,7 +1,7 @@
-Feature:
+Feature: IMDb
 
-  Scenario: Create a new Disney account
-    Given I access the Disney shop website
-    And go to Create an Account
-    When I filled up the new account form with <First Name>
+  Scenario: Create a IMDb account
+    Given I access the IMDb website
+    #And go to Create a New Account
+    #When I filled up the new account form with <First Name>
   #<Last Name>, <Email>, <Password>, <Birth Date>, <Country> and <Postcode>
